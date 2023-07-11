@@ -1,0 +1,20 @@
+version: 1
+jobs:
+        build:
+                <environment>
+                steps:
+                        - run:
+                                name: clone
+                                command: git clone git@github.com:celdr/circleci_test.git
+
+                        - run:
+                                name: checkout
+                                command: git checkout main
+
+                        - run:
+                                name: Greeting
+                                command: echo Hello, world.
+
+                        - run:
+                                name: Print the Current Time
+                                command: date
